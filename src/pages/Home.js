@@ -2,6 +2,7 @@ import React from 'react'
 import '../style/home.scss'
 import collectionsItems from '../Components/collectionsItemsData';
 import Image1 from '../Components/images/paradise-flower.jpg'
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -19,7 +20,7 @@ export default function Home() {
                         const { id, category, img } = collectionItem ;
                         return <article key={id} className="collection-item">
                             <img className="item-img" src={img} alt='' />
-                            <h4 className="item-title">{category}</h4>
+                            <Link to={`/${category}`} className="item-title">{category}</Link>
                         </article>
                     })}
                 </div>

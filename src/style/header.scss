@@ -28,8 +28,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
     
 }
+
 
 .navbar-artist-name {
     width: fit-content;
@@ -53,5 +55,88 @@
     height: 1px;
     width: 100%;
     background-color: grey;
+    
 }
 
+.navbar-buttons-icon {
+    font-size: 1.5rem;
+}
+
+.open-close-box {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger-icon, .close-icon { 
+    position: absolute;
+}
+
+.header-top-animation {
+    width: 100%;
+    height: fit-content;
+    position: absolute; 
+    z-index: 10;
+}
+
+
+
+.menu {
+    overflow: hidden;
+    z-index: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    animation: menuanimation 1s ease;
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-laptop {
+    display: none;
+}
+
+.display-none {
+    display: none;
+}
+
+@keyframes menuanimation {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.link-menu {
+    margin: 15px 0 15px 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (min-width: 960px) {
+
+    .hamburger-icon, .close-icon { 
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-laptop {
+        display: flex;
+        width: 100%;
+        margin-top: 10vh;
+        height: 15vh;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+}

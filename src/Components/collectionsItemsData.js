@@ -3,12 +3,12 @@
 const collectionsItems = [
     {
         id: 1,
-        category: 'prints',
+        category: 'calendars',
         img: '',
     },
     {
         id: 2,
-        category: 'other prints',
+        category: 'illustrations',
         img: '',
     },
 
@@ -19,7 +19,7 @@ const collectionsItems = [
     },
     {
         id: 4,
-        category: 'calendars',
+        category: 'stickers',
         img: '',
     },
 
