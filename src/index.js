@@ -10,7 +10,10 @@ import Illustrations from './pages/Illustrations'
 import Stickers from './pages/Stickers'
 import Mugs from './pages/Mugs'
 import Calendars from './pages/Calendars'
+import ShoppingCart from './pages/ShoppingCart';
 import './style/index.scss'
+
+import Categories from './Components/Categories'
 
 
 ReactDOM.render( 
@@ -25,9 +28,12 @@ ReactDOM.render(
       <Route path="/stickers" element={<Stickers />} />   
       <Route path="/mugs" element={<Mugs />} />  
       <Route path="/calendars" element={<Calendars />} /> 
+      <Route path="/shoppingcart" element={<ShoppingCart />} /> 
     </Routes>
     <Footer />  
   </Router>,
   document.getElementById('root')
 )
 
+// const allCategories = ['all', ...new Set(items.map((item) => item.category))]; 
+// console.log(allCategories)

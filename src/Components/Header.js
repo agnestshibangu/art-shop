@@ -23,17 +23,30 @@ export default function Header() {
                 </div>
 
                 <div className="header-navbar">
-                    <div className="navbar-artist-name">jessica woods</div>
-                    <div className="navbar-buttons">
-                        <BsSearch className="navbar-buttons-icon " />
-                        <BsHandbag className="navbar-buttons-icon" />
-                        <div className="open-close-box" onClick={toggleOpenMenu}>
-                            {openMenu ? <GrClose className="navbar-buttons-icon close-icon" /> :
-                                <BiMenu className="navbar-buttons-icon hamburger-icon" />}
+
+                    <Link to="/" className="navbar-artist-name">jessica woods</Link>
+
+                    <div className="header-right-side">
+
+                        <div className="search-box">
+                            <input className="search-bar" type="text" name="" placeholder="Look for" />
+                            <BsSearch className="navbar-buttons-icon search-icon" />
                         </div>
+
+                    <Link to="/shoppingcart"><BsHandbag className="navbar-buttons-icon cart-icon" /></Link>
+                        
+
+                        {/* 
+                            <div className="open-close-box" onClick={toggleOpenMenu}>
+                                {openMenu ? <GrClose className="navbar-buttons-icon close-icon" /> :
+                                    <BiMenu className="navbar-buttons-icon hamburger-icon" />}
+                            </div> */}
+
+
                     </div>
 
                 </div>
+
             </div>
 
             <div className="navbar-header-bar" />

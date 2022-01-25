@@ -2,17 +2,19 @@ import React from 'react'
 import '../style/footer.scss'
 import { BsInstagram } from 'react-icons/bs';
 import { GrAmex } from 'react-icons/gr';
-import { SiVisa } from 'react-icons/si'
-import { RiMastercardFill } from 'react-icons/ri'
-import { RiMastercardLine } from 'react-icons/ri'
-import { FaPaypal } from 'react-icons/fa'
+import { SiVisa } from 'react-icons/si';
+import { RiMastercardFill } from 'react-icons/ri';
+import { RiMastercardLine } from 'react-icons/ri';
+import { FaPaypal } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 
 
 export default function Footer() {
     return (
         <div className="footer-container">
-            <BsInstagram className="footer-insta-icon" />
+            <a href="https://www.instagram.com"><BsInstagram className="footer-insta-icon" /></a>
+           
 
             <div className="footer-payments-container">
             <GrAmex className="footer-icons" />

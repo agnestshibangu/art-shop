@@ -8,7 +8,13 @@ export default function Home() {
     return (
         <div className="home-container">
 
-            <img src={Image1} alt="" className="header-container-image" />
+            <div className="header-container">
+                <img src={Image1} alt="" className="header-container-image" />
+                <h2 className="header-container-image-title1">Prints, stickers and mugs</h2>
+                <h3 className="header-container-image-title2">Created with love by illustrator Jessica Woods</h3> 
+            </div>
+
+
 
             <div className="collections-container">
 
@@ -17,7 +23,7 @@ export default function Home() {
                 <div className="collections-grid">
 
                     {collectionsItems.map((collectionItem) => {
-                        const { id, category, img } = collectionItem ;
+                        const { id, category, img } = collectionItem;
                         return <article key={id} className="collection-item">
                             <img className="item-img" src={img} alt='' />
                             <Link to={`/${category}`} className="item-title">{category}</Link>
@@ -28,7 +34,7 @@ export default function Home() {
 
             </div>
 
-            <div className="navbar-header-bar"/>
+            <div className="navbar-header-bar" />
         </div>
 
 
