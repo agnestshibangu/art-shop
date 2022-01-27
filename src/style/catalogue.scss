@@ -3,12 +3,13 @@
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    margin-top: 20px;
+    margin: 10px 0px 10px 150px;
+
 }
 
 .filter-category-btn {
     border: none;
-    width: 15%;
+    width: 13%;
     padding: 4px 10px;
     
    
@@ -22,4 +23,45 @@
         border-right: 2px solid lightgray;
         border-bottom: 2px solid lightgray;
     }
+}
+
+.catalogue-bar {
+    width: 100%; 
+    height: 1px;
+    background-color: grey;
+}
+
+.category-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-count {
+    font-style: italic;
+    font-size: 14px;
+    width: 20%;
+}
+
+.section-center {
+    margin-top: 40px;
+}
+
+.img-product {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-item {
+    border: 1px solid black;
+}
+
+.item-title {
+    text-decoration: none;
+    color: black;
+    &:hover {
+        text-decoration: underline;
+        color: black;
+    }
+
 }

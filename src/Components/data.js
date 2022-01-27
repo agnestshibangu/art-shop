@@ -1,19 +1,21 @@
+import imgCatalogue from './images/paradise-flower.jpg' 
+
 const items = [
     {
         id: 1,
         title: 'mug 1',
         category: 'mugs',
         price: 15.99,
-        img: './images/mug.jpg',
-        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+        img: {imgCatalogue},
+        desc: `Je suis une tasse`,
       },
       {
         id: 2,
         title: 'mug 2',
         category: 'mugs',
         price: 15.99,
-        img: './images/mug.jpg',
-        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+        img: 'images/mug.jpg',
+        desc: `Je suis une tasse`,
       },
 
       {
@@ -21,8 +23,8 @@ const items = [
         title: 'mug 3',
         category: 'mugs',
         price: 15.99,
-        img: './images/mug.jpg',
-        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+        img: 'images/mug.jpg',
+        desc: `Je suis une tasse`,
       },
       {
         id: 4,
@@ -30,7 +32,7 @@ const items = [
         category: 'illustrations',
         price: 15.99,
         img: './images/item-1.jpeg',
-        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+        desc: `Je suis une illustration`,
       },
       {
         id: 5,
@@ -38,7 +40,7 @@ const items = [
         category: 'illustrations',
         price: 15.99,
         img: './images/item-1.jpeg',
-        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+        desc: `Je suis une illustration`,
       },
       {
         id: 6,
@@ -46,7 +48,7 @@ const items = [
         category: 'calendars',
         price: 15.99,
         img: './images/item-1.jpeg',
-        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+        desc: `Je suis un calendrier`,
       },
       {
         id: 7,
@@ -54,7 +56,7 @@ const items = [
         category: 'calendars',
         price: 15.99,
         img: '',
-        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+        desc: `Je suis un calendrier`,
       },
       {
         id: 8,
@@ -62,7 +64,7 @@ const items = [
         category: 'stickers',
         price: 15.99,
         img: './images/stickers.jpg',
-        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+        desc: `Je suis un set de sticker`,
       }, 
       {
         id: 9,
@@ -70,7 +72,7 @@ const items = [
         category: 'stickers',
         price: 15.99,
         img: './images/item-1.jpeg',
-        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+        desc: `Je suis un set de sticker`,
       }, 
       {
         id: 10,
@@ -78,7 +80,7 @@ const items = [
         category: 'stickers',
         price: 15.99,
         img: './images/item-1.jpeg',
-        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+        desc: `Je suis un set de sticker`,
       },
 ]
 

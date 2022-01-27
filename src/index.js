@@ -11,6 +11,7 @@ import Stickers from './pages/Stickers'
 import Mugs from './pages/Mugs'
 import Calendars from './pages/Calendars'
 import ShoppingCart from './pages/ShoppingCart';
+import SingleItemPage from './pages/SingleItemPage';
 import './style/index.scss'
 
 import Categories from './Components/Categories'
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Route path="/mugs" element={<Mugs />} />  
       <Route path="/calendars" element={<Calendars />} /> 
       <Route path="/shoppingcart" element={<ShoppingCart />} /> 
+      <Route path="/singlepageitem/:id" element={<SingleItemPage />} />
     </Routes>
     <Footer />  
   </Router>,
