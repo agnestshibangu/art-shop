@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 // import './style/index.scss'
-import Header from './Components/Header'; 
+import Context from "./context/Context"
+import Header from './Components/Header';
 import Footer from './Components/Footer'
 import Home from './pages/Home'
 import Catalogue from './pages/Catalogue'
@@ -17,22 +18,23 @@ import './style/index.scss'
 import Categories from './Components/Categories'
 
 
-ReactDOM.render( 
-  
+ReactDOM.render(
+
   <Router>
-    <Header /> 
+    <Header />
+    <Context>
     <Routes>
-      {/* <Route path="/login" element={<Login />} /> */}
-      <Route exact path="/" element={<Home />} />
-      <Route path="/catalogue" element={<Catalogue />} />  
-      <Route path="/illustrations" element={<Illustrations />} />    
-      <Route path="/stickers" element={<Stickers />} />   
-      <Route path="/mugs" element={<Mugs />} />  
-      <Route path="/calendars" element={<Calendars />} /> 
-      <Route path="/shoppingcart" element={<ShoppingCart />} /> 
-      <Route path="/singlepageitem/:id" element={<SingleItemPage />} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/catalogue" element={<Catalogue />} />
+        <Route path="/illustrations" element={<Illustrations />} />
+        <Route path="/stickers" element={<Stickers />} />
+        <Route path="/mugs" element={<Mugs />} />
+        <Route path="/calendars" element={<Calendars />} />
+        <Route path="/shoppingcart" element={<ShoppingCart />} />
+        <Route path="/singlepageitem/:id" element={<SingleItemPage />} />
     </Routes>
-    <Footer />  
+    </Context>
+    <Footer />
   </Router>,
   document.getElementById('root')
 )

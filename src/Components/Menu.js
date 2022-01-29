@@ -16,7 +16,7 @@ const Menu = ({ items }) => {
         {items.map((menuItem) => {
             const { id, title, price, img, desc } = menuItem;
                 return <Col sm={12} md={6} lg={3} key={id} className="menu-item col-md-offset-2">
-                <img className="img-product" src={imgCatalogue} />
+                <img className="img-product" src={img} />
                 <div className="item-title-and-price">
                     <Link className="item-title" to={`/singlepageitem/${id}`}>
                         <h4 >{title}</h4>
