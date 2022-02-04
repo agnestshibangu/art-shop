@@ -13,6 +13,7 @@ import Mugs from './pages/Mugs'
 import Calendars from './pages/Calendars'
 import ShoppingCart from './pages/ShoppingCart';
 import SingleItemPage from './pages/SingleItemPage';
+import OrderValidation from './pages/OrderValidation';
 import './style/index.scss'
 
 import Categories from './Components/Categories'
@@ -21,9 +22,9 @@ import Categories from './Components/Categories'
 ReactDOM.render(
 
   <Router>
-    <Header />
     <Context>
-    <Routes>
+      <Header />
+      <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/catalogue" element={<Catalogue />} />
         <Route path="/illustrations" element={<Illustrations />} />
@@ -32,7 +33,8 @@ ReactDOM.render(
         <Route path="/calendars" element={<Calendars />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="/singlepageitem/:id" element={<SingleItemPage />} />
-    </Routes>
+        <Route path="/ordervalidation" element={<OrderValidation />} />
+      </Routes>
     </Context>
     <Footer />
   </Router>,

@@ -25,8 +25,6 @@ const Menu = ({ items }) => {
                 </div>
                 <p className="item-description">{desc}</p>
                 </Col>
-               
-
         })}
          </Row> 
         </Container>

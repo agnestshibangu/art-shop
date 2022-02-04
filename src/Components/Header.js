@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import '../style/header.scss'
 import { BsSearch } from 'react-icons/bs';
 import { BsHandbag } from 'react-icons/bs';
+import { Container, Row, Col } from "react-bootstrap";
 import { BiMenu } from 'react-icons/bi';
 import { GrClose } from 'react-icons/gr';
 import { Link } from "react-router-dom";
+import { CartState } from '../context/Context';
 
 export default function Header() {
 
@@ -13,6 +15,19 @@ export default function Header() {
     const toggleOpenMenu = () => {
         setOpenMenu(!openMenu)
     }
+
+    const {
+        state: { cart },
+        dispatch,
+    } = CartState();
+
+    console.log(cart)
+
+    
+    let totalQuantity = 0;
+    cart.map((cartItem) => totalQuantity += cartItem.qty * 1)
+    console.log(totalQuantity) 
+
 
     return (
         <div className="header-container">
@@ -33,7 +48,10 @@ export default function Header() {
                             <BsSearch className="navbar-buttons-icon search-icon" />
                         </div>
 
-                    <Link to="/shoppingcart"><BsHandbag className="navbar-buttons-icon cart-icon" /></Link>
+                    <Link to="/shoppingcart">
+                        <div className="cart-icon-number">{totalQuantity}</div>
+                        <BsHandbag className="navbar-buttons-icon cart-icon" />
+                    </Link>
                         
 
                         {/* 
