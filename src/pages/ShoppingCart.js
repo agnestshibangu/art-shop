@@ -21,8 +21,6 @@ export default function ShoppingCart() {
     cart.map((cartItem) => totalQuantity += cartItem.qty * 1)
     console.log(totalQuantity) 
 
-
-
     return (
         <div>
             <h1>Shopping Cart</h1>

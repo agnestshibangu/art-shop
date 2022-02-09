@@ -23,10 +23,10 @@ export default function Header() {
 
     console.log(cart)
 
-    
+
     let totalQuantity = 0;
     cart.map((cartItem) => totalQuantity += cartItem.qty * 1)
-    console.log(totalQuantity) 
+    console.log(totalQuantity)
 
 
     return (
@@ -43,22 +43,26 @@ export default function Header() {
 
                     <div className="header-right-side">
 
-                        <div className="search-box">
+                        {/* SEARCH BAR */}
+
+                        {/* <div className="search-box">
                             <input className="search-bar" type="text" name="" placeholder="Look for" />
                             <BsSearch className="navbar-buttons-icon search-icon" />
+                        </div>   */}
+
+
+                        <div className="open-close-box" onClick={toggleOpenMenu}>
+                            {openMenu ? <GrClose className="navbar-buttons-icon close-icon" /> :
+                        <BiMenu className="navbar-buttons-icon hamburger-icon" />}
                         </div>
 
-                    <Link to="/shoppingcart">
-                        <div className="cart-icon-number">{totalQuantity}</div>
-                        <BsHandbag className="navbar-buttons-icon cart-icon" />
-                    </Link>
-                        
+                        <Link to="/shoppingcart">
+                            <div className="cart-icon-number">{totalQuantity}</div> 
+                            <BsHandbag className="navbar-buttons-icon cart-icon" />
+                        </Link>
 
-                        {/* 
-                            <div className="open-close-box" onClick={toggleOpenMenu}>
-                                {openMenu ? <GrClose className="navbar-buttons-icon close-icon" /> :
-                                    <BiMenu className="navbar-buttons-icon hamburger-icon" />}
-                            </div> */}
+
+
 
 
                     </div>

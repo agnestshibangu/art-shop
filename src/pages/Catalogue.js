@@ -27,13 +27,11 @@ function Catalogue() {
 
   return (
     <main>
-      <section className="menu section">
-        <div className='title'>
-        </div>
+      <section className="menu-section">
         <div className="catalogue-bar" />
         <div className='category-box'>
           <Categories categories={categories} filterItems={filterItems} />
-          <div className='item-count'>{itemNumber} items</div>
+          {/* <div className='item-count'>{itemNumber} items</div> */}
         </div>
         <div className="catalogue-bar" />
         <Menu items={menuItems} />

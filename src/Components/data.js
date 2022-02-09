@@ -31,7 +31,7 @@ const items = [
         title: 'illustration 1',
         category: 'illustrations',
         price: 15.99,
-        img: 'https://c8.alamy.com/zoomsfr/9/d405aedbd0b7447fbb83469746829ca0/p42gnj.jpg',
+        img: 'https://i.pinimg.com/736x/44/53/ab/4453ab741b1f82a32495848d53095bbc--black-and-white-illustration-western-comics.jpg',
         desc: `Je suis une illustration`,
       },
       {
@@ -39,7 +39,7 @@ const items = [
         title: 'illustration 2',
         category: 'illustrations',
         price: 15.99,
-        img: 'https://c8.alamy.com/zoomsfr/9/d405aedbd0b7447fbb83469746829ca0/p42gnj.jpg',
+        img: 'https://i.pinimg.com/736x/44/53/ab/4453ab741b1f82a32495848d53095bbc--black-and-white-illustration-western-comics.jpg',
         desc: `Je suis une illustration`,
       },
       {
@@ -47,7 +47,7 @@ const items = [
         title: 'calendar 1',
         category: 'calendars',
         price: 15.99,
-        img: 'https://www.coque-unique.com/clothes/calendrier-photo-pineapplle-white.jpg',
+        img: 'https://worldofprintables.com/wp-content/uploads/2020/10/June-2021-Calendar-Monochrome-Photography-791x1024.jpg',
         desc: `Je suis un calendrier`,
       },
       {
@@ -55,7 +55,7 @@ const items = [
         title: 'calendar 2',
         category: 'calendars',
         price: 15.99,
-        img: 'https://www.coque-unique.com/clothes/calendrier-photo-pineapplle-white.jpg',
+        img: 'https://worldofprintables.com/wp-content/uploads/2020/10/June-2021-Calendar-Monochrome-Photography-791x1024.jpg',
         desc: `Je suis un calendrier`,
       },
       {
@@ -63,7 +63,7 @@ const items = [
         title: 'set stickers 1',
         category: 'stickers',
         price: 15.99,
-        img: 'https://image.freepik.com/vecteurs-libre/t-shirt-sticker-cercle-noir-blanc_24992-312.jpg',
+        img: 'https://d6ce0no7ktiq.cloudfront.net/images/preview/2015/10/05/design-5762/template-sticker-600x600.png',
         desc: `Je suis un set de sticker`,
       }, 
       {
@@ -71,7 +71,7 @@ const items = [
         title: 'set stickers 2',
         category: 'stickers',
         price: 15.99,
-        img: 'https://image.freepik.com/vecteurs-libre/t-shirt-sticker-cercle-noir-blanc_24992-312.jpg',
+        img: 'https://d6ce0no7ktiq.cloudfront.net/images/preview/2015/10/05/design-5762/template-sticker-600x600.png',
         desc: `Je suis un set de sticker`,
       }, 
       {
@@ -79,7 +79,7 @@ const items = [
         title: 'set stickers 3',
         category: 'stickers',
         price: 15.99,
-        img: 'https://image.freepik.com/vecteurs-libre/t-shirt-sticker-cercle-noir-blanc_24992-312.jpg',
+        img: 'https://d6ce0no7ktiq.cloudfront.net/images/preview/2015/10/05/design-5762/template-sticker-600x600.png',
         desc: `Je suis un set de sticker`,
       },
 ]

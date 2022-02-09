@@ -9,7 +9,8 @@ export default function Home() {
         <div className="home-container">
 
             <div className="header-container">
-                <img src={Image1} alt="" className="header-container-image" />
+                {/* <img src={Image1} alt="" className="header-container-image" /> */}
+                <div  className="header-container-image" />
                 <h2 className="header-container-image-title1">Prints, stickers and mugs</h2>
                 <h3 className="header-container-image-title2">Created with love by illustrator Jessica Woods</h3> 
             </div>
