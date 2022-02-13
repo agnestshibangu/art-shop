@@ -9,8 +9,6 @@ const Menu = ({ items }) => {
 
     return <div className="section-center">
 
-
-
         <Container>
             <Row >
                 {items.map((menuItem) => {

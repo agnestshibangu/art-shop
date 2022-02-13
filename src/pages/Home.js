@@ -1,35 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../style/home.scss'
 import collectionsItems from '../Components/collectionsItemsData';
-import Image1 from '../Components/images/paradise-flower.jpg'
+import Image1 from '../Components/images/black-stroke.png'
 import { Link } from "react-router-dom";
+import HomeButtons from '../Components/HomeButtons';
 
 export default function Home() {
+
+    
+
     return (
         <div className="home-container">
 
             <div className="header-container">
-                {/* <img src={Image1} alt="" className="header-container-image" /> */}
-                <div  className="header-container-image" />
-                <h2 className="header-container-image-title1">Prints, stickers and mugs</h2>
-                <h3 className="header-container-image-title2">Created with love by illustrator Jessica Woods</h3> 
+
+                <div className="header-container-image">
+
+                    <div className='box-header-overlap'>
+                        <img src={Image1} alt="" className="header-container-image" />
+                        <div className='inner-text-container'>
+                            <h3 className="header-container-image-title1">Prints, stickers and mugs</h3>
+                            <h4 className="header-container-image-title2">Created with love by illustrator Jessica Woods</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
 
             <div className="collections-container">
 
+            <div className='collections-top-bar' />
+
+            <div className='collection-title-box'>
                 <h2 className="collections-title">Collections list</h2>
+                <div className='collections-title-bar' />
+            </div>
 
                 <div className="collections-grid">
-
-                    {collectionsItems.map((collectionItem) => {
-                        const { id, category, img } = collectionItem;
-                        return <article key={id} className="collection-item">
-                            <img className="item-img" src={img} alt='' />
-                            <Link to={`/${category}`} className="item-title">{category}</Link>
-                        </article>
-                    })}
+                <HomeButtons  />
                 </div>
 
 
