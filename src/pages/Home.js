@@ -7,7 +7,9 @@ import HomeButtons from '../Components/HomeButtons';
 
 export default function Home() {
 
-    
+
+
+
 
     return (
         <div className="home-container">
@@ -30,17 +32,14 @@ export default function Home() {
 
             <div className="collections-container">
 
-            <div className='collections-top-bar' />
+                {/* <div className='collections-top-bar' /> */}
 
-            <div className='collection-title-box'>
-                <h2 className="collections-title">Collections list</h2>
-                <div className='collections-title-bar' />
-            </div>
-
-                <div className="collections-grid">
-                <HomeButtons  />
+                <div className='collection-title-box'>
+                    <h2 className="collections-title">Collections list</h2>
+                    <div className='collections-title-bar' />
                 </div>
 
+                <HomeButtons />
 
             </div>
 

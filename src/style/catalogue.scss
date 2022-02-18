@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400&family=Merriweather:ital@1&family=Roboto&display=swap');
+
+.item-title, .item-price {
+    text-decoration: none;
+    color: black;
+}
+
+.item-title {
+    margin: 10px 0 0 0;
+}
+
 .btn-container {
     width: 90%;
     display: flex;
@@ -11,15 +22,24 @@
     width: fit-content;
     padding: 4px 10px;
     cursor: pointer;
-    border-right: 5px solid lightgray;
-    border-bottom: 5px solid lightgray;
-    border-radius: 5px;
-    transition: 0.2s;
-    &:hover {
-        border-right: 2px solid lightgray;
-        border-bottom: 2px solid lightgray;
-    }
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    letter-spacing: 0.15rem;
+    // transition: 0.2s;
+    // &:hover {
+    //     border-right: 2px solid lightgray;
+    //     border-bottom: 2px solid lightgray;
+    // }
 }
+
+
+
+.underline-active {
+    width: 95%;
+    height: 20px;
+    background-color: red;
+} 
 
 .catalogue-bar {
     width: 100%;
@@ -44,8 +64,8 @@
 }
 
 .img-product {
-    width: 120px;
-    height: 145px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -60,20 +80,54 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
+    justify-content: center;
+    align-items: center;
 }
 
-.item-title {
+.collection-item-title {
     width: fit-content;
-    margin-top: 10px;
     text-decoration: none;
-    color: black;
+    color:  white;
+    margin-bottom: 0;
+    position: absolute;
+    top: 80%;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.25rem;
     &:hover {
         text-decoration: underline;
         color: black;
     }
 }
+
+.button-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+.button-see-all {
+    width: 100px;
+    top: 77%;
+    right: 5%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white;
+    letter-spacing: 0.15rem;
+}
+
+.button-see-all-none, .collection-item-title-none {
+    display: none;
+}
+
+
+
+
 
 @media (max-width: 1200px) {
     .menu-item {
@@ -86,7 +140,13 @@
     .menu-item {
         width: 45%;
     }
+}
 
+
+@media (max-width: 900px) {
+.collection-item-title {
+    top: 30%;
+    }
 }
 
 @media (max-width: 445px) {
@@ -94,6 +154,12 @@
         width: 90%;
     }
 
+    .button-see-all {
+        top: 74%; 
+        left: 10%;
+        width: 80%;
+
+    }
 
 
 }

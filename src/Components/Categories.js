@@ -12,7 +12,6 @@ const Categories = ({ categories,filterItems }) => {
             )
         })}
       
-
     </div>
 }
 
