@@ -32,17 +32,25 @@ export default function SingleItemPage() {
 
     return <div>
         <div className="container-single-item">
-            <img className="container-single-item-img"  src={img} />
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <p>{price}</p>
-            <button
-                onClick={() => {
-                    dispatch({
-                        type: 'ADD_TO_CART',
-                        payload: product,
-                    })
-                }}>Add to cart</button>
+           
+           <div className="single-item-sub-container sub-container1">
+                <img className="container-single-item-img"  src={img} />
+           </div>
+                              
+           
+           <div className="single-item-sub-container sub-container2">
+                    <h2>{title}</h2>
+                    <p>{description}</p>
+                    <p className='price-tag'>${price}</p>
+                    <button className='add-to-cart-button'
+                        onClick={() => {
+                            dispatch({
+                                type: 'ADD_TO_CART',
+                                payload: product,
+                            })
+                        }}>Add to cart</button>
+            </div>
+
         </div>
 
 
