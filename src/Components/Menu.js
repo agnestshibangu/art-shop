@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from "react-bootstrap";
 import imgCatalogue from '../Components/images/illu.jpg';
 import { Link } from "react-router-dom";
+import '../style/catalogue.scss';
 
 const Menu = ({ items }) => {
 
@@ -19,9 +20,9 @@ const Menu = ({ items }) => {
                                 <img className="img-product" src={img} />
                                 {/* <div className="item-title-and-price"> */}
 
-                                <h4 className="item-title">{title}</h4>
+                                <p className="item-title">{title}</p>
 
-                                <span className="item-price">${price}</span>
+                                <p className="item-price">${price}</p>
                                 {/* </div> */}
 
                             </div>

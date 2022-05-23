@@ -2,7 +2,18 @@
 
 .item-title, .item-price {
     text-decoration: none;
+    text-transform: uppercase;
+}
+
+.item-title {
+    letter-spacing: 0.15rem;
     color: black;
+}
+
+.item-price {
+    letter-spacing: 0rem;
+    color: grey;
+    font-size: 14px;
 }
 
 .item-title {
@@ -10,11 +21,11 @@
 }
 
 .btn-container {
-    width: 90%;
+   // width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 50px auto;
+    margin: 50px 20px;
 }
 
 .filter-category-btn {
@@ -26,11 +37,14 @@
     background-color: white;
     border-radius: 10px;
     letter-spacing: 0.15rem;
-    // transition: 0.2s;
-    // &:hover {
-    //     border-right: 2px solid lightgray;
-    //     border-bottom: 2px solid lightgray;
-    // }
+    font-size: 15px;
+    margin-left: 40px;
+    transition: 0.6s;
+    &:hover {
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+    }
 }
 
 
@@ -51,6 +65,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 30px auto;
+    background-color: rgb(235, 235, 235);
 }
 
 .item-count {
@@ -60,7 +76,7 @@
 }
 
 .section-center {
-    margin-top: 40px;
+    margin-top: 70px;
 }
 
 .img-product {
@@ -80,10 +96,11 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     justify-content: center;
     align-items: center;
+    border: solid grey 1px;
 }
 
 .collection-item-title {
@@ -129,18 +146,18 @@
 
 
 
-@media (max-width: 1200px) {
-    .menu-item {
-        // border: 1px solid black;
-        width: 31%;
-    }
-}
+// @media (max-width: 1200px) {
+//     .menu-item {
+//         // border: 1px solid black;
+//         width: 32%;
+//     }
+// }
 
-@media (max-width: 992px) {
-    .menu-item {
-        width: 45%;
-    }
-}
+// @media (max-width: 992px) {
+//     .menu-item {
+//         width: 45%;
+//     }
+// }
 
 
 @media (max-width: 900px) {
@@ -150,9 +167,9 @@
 }
 
 @media (max-width: 445px) {
-    .menu-item {
-        width: 90%;
-    }
+    // .menu-item {
+    //     width: 90%;
+    // }
 
     .button-see-all {
         top: 74%; 
