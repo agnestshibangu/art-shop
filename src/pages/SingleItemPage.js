@@ -39,16 +39,24 @@ export default function SingleItemPage() {
                               
            
            <div className="single-item-sub-container sub-container2">
+                <div className="sub-container2-top">
                     <h2>{title}</h2>
                     <p>{description}</p>
                     <p className='price-tag'>${price}</p>
+
+                </div>
+                   
+                <div className='buttons-group'>
+                    <button className='buy-now-button'>Buy now</button>
                     <button className='add-to-cart-button'
-                        onClick={() => {
-                            dispatch({
-                                type: 'ADD_TO_CART',
-                                payload: product,
-                            })
-                        }}>Add to cart</button>
+                            onClick={() => {
+                                dispatch({
+                                    type: 'ADD_TO_CART',
+                                    payload: product,
+                                })
+                            }}>Add to cart</button>
+                </div>
+            
             </div>
 
         </div>
@@ -68,8 +76,9 @@ export default function SingleItemPage() {
                                     <h4 >{title}</h4>
                                 </Link>
                                 <span className="item-price">${price}</span>
+                                <p className="item-description">{desc}</p>
                             </div>
-                            <p className="item-description">{desc}</p>
+                           
                         </Col>
                     })}
                 </Row>
