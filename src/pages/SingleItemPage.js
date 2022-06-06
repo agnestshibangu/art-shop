@@ -40,7 +40,7 @@ export default function SingleItemPage() {
            
            <div className="single-item-sub-container sub-container2">
                 <div className="sub-container2-top">
-                    <h2>{title}</h2>
+                    <h2 className="item-title">{title}</h2>
                     <p>{description}</p>
                     <p className='price-tag'>${price}</p>
 
@@ -63,7 +63,7 @@ export default function SingleItemPage() {
 
 
         <div className="suggestion-box">
-            <h1 className="suggestion-box-title">you may also like</h1>
+            <h2 className="suggestion-box-title">you may also like</h2>
 
             <Container>
                 <Row >
