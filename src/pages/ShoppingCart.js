@@ -23,8 +23,15 @@ export default function ShoppingCart() {
 
     return (
         <div>
-            <h1>Shopping Cart</h1>
+            <div className='shopping-cart-top-box-titles'>
+                <h1 className='shopping-cart-title'>Shopping Cart</h1>
+                <Link to="/catalogue" className="keep-buying-link">Keep buying</Link>
+
+            </div>
+           
+            
             <Container>
+            
                 <Row >
                     {cart.map((cartItem) => {
                         const { id, title, price, img, desc, qty } = cartItem;
@@ -34,7 +41,7 @@ export default function ShoppingCart() {
                                 <span className="item-price">${price}</span>
                             </div>
                             <h3 className="item-title">{title}</h3>
-                            <button
+                            <button className="remove-button"
                                 onClick={() => {
                                     dispatch({
                                         type: 'REMOVE_FROM_CART',
@@ -42,7 +49,7 @@ export default function ShoppingCart() {
                                     })
                                 }}>REMOVE</button>
 
-                            <input type="number" id="quantity" defaultValue={qty} name="quantity" min="1" max="5"
+                            <input className="input" type="number" id="quantity" defaultValue={qty} name="quantity" min="1" max="5"
                                 onChange={(e) =>
                                     dispatch({
                                         type: "CHANGE_CART_QTY",
@@ -58,12 +65,19 @@ export default function ShoppingCart() {
                 </Row>
             </Container>
 
-            <div className="total-amount">TOTAL = ${totalPrice}</div>
-
-            <Link  to="/ordervalidation">
-                <button className="finish-order-button">FINISH ORDER</button>
-            </Link>
-
+            <div className="total-container">    
+                <div className="total-bar"/>
+                <div className="total-container-box">
+                    <div className='total-box'>
+                        <p className="total-amount-p">Subtotal </p>
+                        <p className="total-amount-digit">${totalPrice}USD</p>
+                    </div>
+                
+                    <Link className="finish-order-button" to="/ordervalidation">
+                        <button className="finish-order-inner-button">FINISH ORDER</button>
+                    </Link>
+                </div>          
+            </div>
         </div>
     )
 }
