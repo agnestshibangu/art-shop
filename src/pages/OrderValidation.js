@@ -3,6 +3,7 @@ import { CartState } from '../context/Context';
 import { Container, Row, Col } from "react-bootstrap";
 import '../style/ordervalidation.scss'
 
+
 export default function OrderValidation() {
 
     const {
@@ -13,62 +14,51 @@ export default function OrderValidation() {
     console.log(cart)
 
     let totalPrice = 0;
-    cart.map((cartItem) => totalPrice += cartItem.price * cartItem.quantity)
-    console.log(totalPrice)
+    cart.map((cartItem) => totalPrice += cartItem.price * cartItem.qty)
+    console.log(totalPrice) 
 
 
     return <div>
-        <h1>Order validation page</h1>
+        <h1 className='order-validation-title'>Order validation</h1>
 
-        <div className="order-recap-section">
-            <Container>
-                <Row >
-                    {cart.map((menuItem) => {
-                        const { id, title, price, img, desc } = menuItem;
-                        return <Col sm={12} md={6} lg={3} key={id} className="menu-item col-md-offset-2">
-                            <img className="img-product" src={img} />
-                            <div className="item-title-and-price">
-                                <span className="item-price">${price}</span>
-                            </div>
-                            <p className="item-description">{desc}</p>
-                        </Col>
-                    })}
-                </Row>
-            </Container>
-            <div className="total-amount">TOTAL = ${totalPrice}</div>
+        <div className="validation-two-parts-container">
+            <form className="customer-form">
+                    <input className="form-input" type="text" name="email" placeholder='email'/>
+                    <div className="first-last-name-box">
+                    <input className="form-input input-name" type="text" name="firstName" placeholder="first name"/>
+                    <input className="form-input input-name"  type="text" name="lastName" placeholder="last name" />
+                    </div>
+                    <input className="form-input" type="text" name="address" placeholder="address"/>
+                    <input className="form-input" type="text" name="city" placeholder="city"/>
+                    <input className="form-input" type="text" name="postal code" placeholder="postal code"/>
+
+                <input className="form-submit-button" type="submit" value="Envoyer" />
+            </form>
+
+            <div className="validation-bar"/>
+
+            <div className="order-recap-section">
+                <Container>
+                        {cart.map((menuItem) => {
+                            const { id, title, price, img, desc } = menuItem;                    
+                            return <div key={id} className="menu-item-validation">
+                                <img className="img-product-validation" src={img} />
+                                <div className="item-title-and-price-validation">
+                                    <span className="item-price-validation">${price}</span>
+                                    <p className="item-description">{title}</p>
+                                </div>
+                               
+                                </div>
+                        })}
+                </Container>
+                <div className="total-amount-box-validation">
+                    <p className="total-amount-digit-validation">${totalPrice}USD</p>
+                </div>
+            </div>
+        
+          
+
         </div>
-
-        <form className="customer-form">
-            <label>
-                email:
-                <input type="text" name="email" />
-            </label>
-            <label>
-                first name :
-                <input type="text" name="firstName" />
-            </label>
-            <label>
-                last name :
-                <input type="text" name="lastName" />
-            </label>
-            <label>
-                address :
-                <input type="text" name="address" />
-            </label>
-            <label>
-                postal code :
-                <input type="text" name="postalCode" />
-            </label>
-            <label>
-                city :
-                <input type="text" name="city" />
-            </label>
-            <label>
-                phone number :
-                <input type="text" name="phoneNumber" />
-            </label>
-            <input className="form-submit-button" type="submit" value="Envoyer" />
-        </form>
 
     </div>;
 }

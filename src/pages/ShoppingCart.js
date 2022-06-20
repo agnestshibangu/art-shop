@@ -11,8 +11,6 @@ export default function ShoppingCart() {
         dispatch,
     } = CartState();
 
-    console.log(cart)
-
     let totalPrice = 0;
     cart.map((cartItem) => totalPrice += cartItem.price * cartItem.qty)
     console.log(totalPrice) 
@@ -21,16 +19,26 @@ export default function ShoppingCart() {
     cart.map((cartItem) => totalQuantity += cartItem.qty * 1)
     console.log(totalQuantity) 
 
+
     return (
         <div>
             <div className='shopping-cart-top-box-titles'>
-                <h1 className='shopping-cart-title'>Shopping Cart</h1>
+                <h1 className='shopping-cart-title'>Shopping cart</h1>
                 <Link to="/catalogue" className="keep-buying-link">Keep buying</Link>
 
             </div>
            
             
-            <Container>
+            <Container className='shopping-cart-container'>
+
+            
+
+                        { totalQuantity == 0 ?
+                            <div className='empty-cart-container'>
+                                your cart is empty ! 
+                            </div>
+
+                        : null}
             
                 <Row >
                     {cart.map((cartItem) => {
@@ -73,9 +81,16 @@ export default function ShoppingCart() {
                         <p className="total-amount-digit">${totalPrice}USD</p>
                     </div>
                 
-                    <Link className="finish-order-button" to="/ordervalidation">
-                        <button className="finish-order-inner-button">FINISH ORDER</button>
-                    </Link>
+                
+                    { totalQuantity == 0 ?
+                           null : 
+                           <Link className="finish-order-button" to="/ordervalidation">
+                                <button className="finish-order-inner-button">FINISH ORDER</button>
+                           </Link>
+                        }
+
+
+                   
                 </div>          
             </div>
         </div>

@@ -6,6 +6,18 @@
     font-size: 1.7rem;
 }
 
+// .shopping-cart-container {
+//     min-height: 400px;
+// }
+
+.empty-cart-container {
+    width: fit-content;
+    margin: 100px auto;
+    border: 1px solid black;
+    padding: 20px 60px;
+}
+
+
 .shopping-cart-top-box-titles {
     display: flex;
     flex-direction: column;

@@ -25,7 +25,7 @@ function Illustrations() {
               </Link>
               <span className="item-price">${price}</span>
             </div>
-            <p className="item-description">{desc}</p>
+            {/* <p className="item-description">{desc}</p> */}
           </Col>
         })}
       </Row>

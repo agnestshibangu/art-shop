@@ -15,13 +15,14 @@ import ShoppingCart from './pages/ShoppingCart';
 import SingleItemPage from './pages/SingleItemPage';
 import OrderValidation from './pages/OrderValidation';
 import './style/index.scss'
-
+import ScrollToTop from './Components/ScrollToTop'
 import Categories from './Components/Categories'
 
 
 ReactDOM.render(
 
   <Router>
+    <ScrollToTop />
     <Context>
       <Header />
       <Routes>
