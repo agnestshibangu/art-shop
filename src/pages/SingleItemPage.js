@@ -76,7 +76,6 @@ export default function SingleItemPage() {
                                     <h4 >{title}</h4>
                                 </Link>
                                 <span className="item-price">${price}</span>
-                                <p className="item-description">{desc}</p>
                             </div>
                            
                         </Col>
